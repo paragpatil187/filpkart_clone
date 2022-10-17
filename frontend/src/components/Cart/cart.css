@@ -1,9 +1,10 @@
-.maincart{
+/* .maincart{
     width:80%;
     margin:auto;
     margin-top:20%;
     display: flex;
-    gap:5%
+    gap:5%;
+    border: 2px solid red;
     
 }
 .cartdiv{
@@ -11,4 +12,4 @@
 }
 .btns{
     background-color: rgb(201, 17, 134);
-}
+} */

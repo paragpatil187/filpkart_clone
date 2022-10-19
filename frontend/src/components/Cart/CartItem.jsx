@@ -3,45 +3,44 @@ import clsx from "clsx";
 import GroupButton from "./GroupButton";
 
 const useStyle = makeStyles({
-    component: {
-        borderTop: '1px solid #f0f0f0',
-        borderRadius: 0,
-        display: 'flex'
-    },
-    leftComponent: {
-        margin: 20, 
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    image: {
-        height: 110,
-        width: 110
-    },
-    mid: {
-        margin: 20
-    },
-    greyTextColor: {
-        color: '#878787'
-    },
-    smallText: {
-        fontSize: 14,
-    },
-    price: {
-        fontSize: 18,
-        fontWeight: 600
-    },
+  component: {
+    borderTop: "1px solid #f0f0f0",
+    borderRadius: 0,
+    display: "flex",
+  },
+  leftComponent: {
+    margin: 20,
+    display: "flex",
+    flexDirection: "column",
+  },
+  image: {
+    height: 110,
+    width: 110,
+  },
+  mid: {
+    margin: 20,
+  },
+  greyTextColor: {
+    color: "#878787",
+  },
+  smallText: {
+    fontSize: 14,
+  },
+  price: {
+    fontSize: 18,
+    fontWeight: 600,
+  },
   remove: {
     marginTop: 20,
     fontSize: 16,
-    color:"white",
-    backgroundColor: 'Orange',
+    color: "white",
+    backgroundColor: "Orange",
     "&:hover": {
-        borderRadius: 4,
-        backgroundColor: 'blue',
-        color:"white"
-      },
+      borderRadius: 4,
+      backgroundColor: "blue",
+      color: "white",
+    },
   },
-  
 });
 
 const CartItem = ({ item, removeItemFromCart }) => {

@@ -3,32 +3,33 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 import clsx from "clsx";
 
 const useStyle = makeStyles({
-    component: {
-        // width: '30%'
+  component: {
+    // width: '30%'
+    // border:"1px solid red"
+  },
+  header: {
+    padding: "15px 24px",
+    background: "#fff",
+  },
+  greyTextColor: {
+    color: "#878787",
+  },
+  container: {
+    "& > *": {
+      marginBottom: 20,
+      fontSize: 14,
     },
-    header: {
-        padding: '15px 24px',
-        background: '#fff'
-    },
-    greyTextColor: {
-        color: '#878787'
-    },
-    container: {
-        '& > *': {
-            marginBottom: 20,
-            fontSize: 14
-        }
-    },
-    price: {
-        float: 'right'
-    },
-    totalAmount: {
-        fontSize: 18,
-        fontWeight: 600,
-        borderTop: '1px dashed #e0e0e0',
-        padding: '20px 0',
-        borderBottom: '1px dashed #e0e0e0'
-    }
+  },
+  price: {
+    float: "right",
+  },
+  totalAmount: {
+    fontSize: 18,
+    fontWeight: 600,
+    borderTop: "1px dashed #e0e0e0",
+    padding: "20px 0",
+    borderBottom: "1px dashed #e0e0e0",
+  },
 });
 
 const TotalView = ({ cartItems }) => {

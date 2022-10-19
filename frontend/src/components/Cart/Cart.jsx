@@ -1,8 +1,6 @@
 import { Box, makeStyles, Typography, Button, Grid } from "@material-ui/core";
-import { ConstructionOutlined } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import {
   decrementitem,
   deleteCart,
@@ -15,43 +13,54 @@ import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
 import TotalView from "./TotalView";
 
-
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles((theme) => ({
   component: {
-      // marginTop: 55,
-      padding: '30px 135px',
-      display: 'flex',
-      [theme.breakpoints.down('sm')]: {
-          padding: '15px 0'
-      }
+    // marginTop: 55,
+    padding: "30px 135px",
+    display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      padding: "15px 0",
+    },
   },
   leftComponent: {
-      // width: '67%',
-      paddingRight: 15,
-      [theme.breakpoints.down('sm')]: {
-          marginBottom: 15
-      }
+    // width: '67%',
+    paddingRight: 15,
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "15px 0",
+    },
   },
   header: {
-      padding: '15px 24px',
-      background: '#fff',
-      marginTop:"70px"
+    padding: "15px 24px",
+    background: "#fff",
   },
   bottom: {
-      padding: '16px 22px',
-      background: '#fff',
-      boxShadow: '0 -2px 10px 0 rgb(0 0 0 / 10%)',
-      borderTop: '1px solid #f0f0f0'
+    
+    padding: "16px 22px",
+    background: "#fff",
+    boxShadow: "0 -2px 10px 0 rgb(0 0 0 / 10%)",
+    borderTop: "1px solid #f0f0f0",
   },
   placeOrder: {
-      display: 'flex',
-      marginLeft: 'auto',
-      background: '#fb641b',
-      color: '#fff',
-      borderRadius: 2,
-      width: 250,
-      height: 51
-  }
+ 
+    marginLeft: "auto",
+    background: "#fb641b",
+    color: "#fff",
+    borderRadius: 2,
+    width: 230,
+    height: 51,
+  
+  },
+
+  removeall:{
+   
+    marginRight: "50px",
+    background: "blue",
+    color: "#fff",
+    borderRadius: 2,
+    width: 230,
+    height: 51,
+  },
+  
 }));
 
 const Cart = () => {
@@ -110,15 +119,19 @@ const Cart = () => {
               >
                 Place Order
               </Button>
+              <Button
+                variant="contained"
+                className={classes.removeall}
+                onClick={() => handlecartDelete()}
+              >
+                Remove All Cart Items
+              </Button>
             </Box>
 
-            <Grid item lg={3} md={3} sm={12} xs={12}>
+            <Grid item lg={9} md={9} sm={12} xs={12}>
               <TotalView cartItems={x} />
             </Grid>
           </Grid>
-          {/* <Button className={classes.remove} onClick={() => handlecartDelete()}>
-            Remove All cart items
-          </Button> */}
         </Grid>
       ) : (
         <EmptyCart />

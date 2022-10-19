@@ -53,6 +53,7 @@ const TotalView = ({ cartItems }) => {
     totalAmount();
   }, [cartItems, totalAmount]);
 
+
   return (
     <Box className={classes.component}>
       <Box
@@ -83,5 +84,6 @@ const TotalView = ({ cartItems }) => {
     </Box>
   );
 };
+
 
 export default TotalView;
